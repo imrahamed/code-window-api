@@ -5,7 +5,7 @@ var cors = require("cors");
 app.use(cors());
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("CORS-enabled web server listening on port 3000");
 });
 
